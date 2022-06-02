@@ -4,6 +4,11 @@ This repository contains code of the assessment for a full-stack developer posit
 
 ## Installation process
 
+- Start app server and database with laravel sail: `./vendor/bin/sail up -d`
+- Generate JWT secret key: `./vendor/bin/sail artisan jwt:secret`
+- Generate certificate for JWT: `./vendor/bin/sail artisan jwt:generate-certs`
+- Run migrations: `./vendor/bin/sail artisan migrate`
+
 ## Flow design
 
 <p align="center"><img src="./.readme-static/app_flow.jpg"></p>
