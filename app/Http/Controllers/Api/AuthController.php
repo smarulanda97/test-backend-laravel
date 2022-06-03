@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Http\Requests\AuthPostRequest;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\LogUserRequest;
 
 class AuthController extends Controller
 {
@@ -20,7 +21,7 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function login(AuthPostRequest $request) {
+    public function login(LogUserRequest $request) {
         if (!($token = auth()->attempt($request->validated()))) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
