@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\QuotationController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +22,6 @@ Route::group(['middleware' => 'api', 'prefix' => 'v1'], function() {
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::post('/refresh', [AuthController::class, 'refresh']);
     });
+
+    Route::post('/quotations', [QuotationController::class, 'store']);
 });
