@@ -8,6 +8,7 @@ This repository contains code of the assessment for a full-stack developer posit
 - Generate JWT secret key: `./vendor/bin/sail artisan jwt:secret`
 - Generate certificate for JWT: `./vendor/bin/sail artisan jwt:generate-certs`
 - Run migrations: `./vendor/bin/sail artisan migrate`
+- Run fronted app `./vendor/bin/sail npm install && ./vendor/bin/sail npm run build`
 
 ## Flow design
 
